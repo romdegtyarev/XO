@@ -14,14 +14,14 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Drawing;
 
+
 namespace Game {
 	/// <summary>
 	/// Логика взаимодействия для MainWindow.xaml
 	/// </summary>
 	public partial class MainWindow : Window {
-		public MainWindow( ) {
-			InitializeComponent( );
-			
+		public MainWindow() {
+			InitializeComponent();
 		}
 		//Varibles
 		string enter = "X";
@@ -35,7 +35,7 @@ namespace Game {
 			Play
 		====================
 		*/
-		public void Play( ) {
+		public void Play() {
 			textBlock.Text = enter + " turning";
 			textBox.IsEnabled = false;
 			textBox1.IsEnabled = false;
@@ -57,8 +57,8 @@ namespace Game {
 			button6.IsEnabled = true;
 			button7.IsEnabled = true;
 			button8.IsEnabled = true;
-			button9.Visibility = ( Visibility )0;
-			button10.Visibility = ( Visibility )1;
+			button9.Visibility = (Visibility)0;
+			button10.Visibility = (Visibility)1;
 		}
 		/*
 		====================
@@ -67,12 +67,12 @@ namespace Game {
 			Start
 		====================
 		*/
-		public void Start(  ) {
+		public void Start() {
 			textBlock.Text = "Ener your name";
 			scoreX = 0;
 			scoreZ = 0;
-			textBlock5.Text = scoreX.ToString( );
-			textBlock6.Text = scoreZ.ToString( );
+			textBlock5.Text = scoreX.ToString();
+			textBlock6.Text = scoreZ.ToString();
 			textBox.IsEnabled = true;
 			textBox1.IsEnabled = true;
 			button.IsEnabled = false;
@@ -93,7 +93,7 @@ namespace Game {
 			button6.Content = "";
 			button7.Content = "";
 			button8.Content = "";
-			button10.Visibility = ( Visibility )0;
+			button10.Visibility = (Visibility)0;
 		}
 		/*
 		====================
@@ -102,24 +102,24 @@ namespace Game {
 			Inspection
 		====================
 		*/
-		public int Inspection (  ) {
-			if ( enter == "X" ) {
+		public int Inspection () {
+			if (enter == "X") {
 				name = textBox.Text;
 			}
-			if ( enter == "0" ) {
+			if (enter == "0") {
 				name = textBox1.Text;
 			}
 			//Horizontal
-			if ( button.Content == button1.Content && button.Content == button2.Content && (string)(button.Content) == enter ) {
+			if (button.Content == button1.Content && button.Content == button2.Content && (string)(button.Content) == enter) {
 				textBlock.Text = enter + " (" + name + ") is Win";
 				
-				if ( enter == "X" ) {
+				if (enter == "X") {
 					scoreX ++;
-					textBlock5.Text = scoreX.ToString( );
+					textBlock5.Text = scoreX.ToString();
 				}
-				if ( enter == "0" ) {
+				if (enter == "0") {
 					scoreZ ++;
-					textBlock6.Text = scoreZ.ToString( );
+					textBlock6.Text = scoreZ.ToString();
 				}
 				button3.IsEnabled = false;
 				button4.IsEnabled = false;
@@ -127,19 +127,19 @@ namespace Game {
 				button6.IsEnabled = false;
 				button7.IsEnabled = false;
 				button8.IsEnabled = false;
-				button11.Visibility = ( Visibility )0;
+				button11.Visibility = (Visibility)0;
 				return 1;
 			}
-			if ( button3.Content == button4.Content && button3.Content == button5.Content && ( string )( button3.Content ) == enter ) {
+			if (button3.Content == button4.Content && button3.Content == button5.Content && (string)(button3.Content) == enter) {
 				textBlock.Text = enter + " (" + name + ") is Win";
 				
-				if ( enter == "X" ) {
+				if (enter == "X") {
 					scoreX++;
-					textBlock5.Text = scoreX.ToString( );
+					textBlock5.Text = scoreX.ToString();
 				}
-				if ( enter == "0" ) {
+				if (enter == "0") {
 					scoreZ++;
-					textBlock6.Text = scoreZ.ToString( );
+					textBlock6.Text = scoreZ.ToString();
 				}
 				button.IsEnabled = false;
 				button1.IsEnabled = false;
@@ -147,19 +147,19 @@ namespace Game {
 				button6.IsEnabled = false;
 				button7.IsEnabled = false;
 				button8.IsEnabled = false;
-				button11.Visibility = ( Visibility )0;
+				button11.Visibility = (Visibility)0;
 				return 1;
 			}
-			if ( button6.Content == button7.Content && button6.Content == button8.Content && ( string )( button6.Content ) == enter ) {
+			if (button6.Content == button7.Content && button6.Content == button8.Content && (string)(button6.Content) == enter) {
 				textBlock.Text = enter + " (" + name + ") is Win";
 				
-				if ( enter == "X" ) {
+				if (enter == "X") {
 					scoreX++;
-					textBlock5.Text = scoreX.ToString( );
+					textBlock5.Text = scoreX.ToString();
 				}
-				if ( enter == "0" ) {
+				if (enter == "0") {
 					scoreZ++;
-					textBlock6.Text = scoreZ.ToString( );
+					textBlock6.Text = scoreZ.ToString();
 				}
 				button.IsEnabled = false;
 				button1.IsEnabled = false;
@@ -167,20 +167,20 @@ namespace Game {
 				button3.IsEnabled = false;
 				button4.IsEnabled = false;
 				button5.IsEnabled = false;
-				button11.Visibility = ( Visibility )0;
+				button11.Visibility = (Visibility)0;
 				return 1;
 			}
 			//Vertical
-			if ( button.Content == button3.Content && button.Content == button6.Content && ( string )( button.Content ) == enter ) {
+			if (button.Content == button3.Content && button.Content == button6.Content && (string)(button.Content) == enter) {
 				textBlock.Text = enter + " (" + name + ") is Win";
 				
-				if ( enter == "X" ) {
+				if (enter == "X") {
 					scoreX++;
-					textBlock5.Text = scoreX.ToString( );
+					textBlock5.Text = scoreX.ToString();
 				}
-				if ( enter == "0" ) {
+				if (enter == "0") {
 					scoreZ++;
-					textBlock6.Text = scoreZ.ToString( );
+					textBlock6.Text = scoreZ.ToString();
 				}
 				button1.IsEnabled = false;
 				button2.IsEnabled = false;
@@ -188,19 +188,19 @@ namespace Game {
 				button5.IsEnabled = false;
 				button7.IsEnabled = false;
 				button8.IsEnabled = false;
-				button11.Visibility = ( Visibility )0;
+				button11.Visibility = (Visibility)0;
 				return 1;
 			}
-			if ( button1.Content == button4.Content && button1.Content == button7.Content && ( string )( button1.Content ) == enter ) {
+			if (button1.Content == button4.Content && button1.Content == button7.Content && (string)(button1.Content) == enter) {
 				textBlock.Text = enter + " (" + name + ") is Win";
 				
-				if ( enter == "X" ) {
+				if (enter == "X") {
 					scoreX++;
-					textBlock5.Text = scoreX.ToString( );
+					textBlock5.Text = scoreX.ToString();
 				}
-				if ( enter == "0" ) {
+				if (enter == "0") {
 					scoreZ++;
-					textBlock6.Text = scoreZ.ToString( );
+					textBlock6.Text = scoreZ.ToString();
 				}
 				button.IsEnabled = false;
 				button2.IsEnabled = false;
@@ -208,19 +208,19 @@ namespace Game {
 				button5.IsEnabled = false;
 				button6.IsEnabled = false;
 				button8.IsEnabled = false;
-				button11.Visibility = ( Visibility )0;
+				button11.Visibility = (Visibility)0;
 				return 1;
 			}
-			if ( button2.Content == button5.Content && button2.Content == button8.Content && ( string )( button2.Content ) == enter ) {
+			if (button2.Content == button5.Content && button2.Content == button8.Content && (string)(button2.Content) == enter) {
 				textBlock.Text = enter + " (" + name + ") is Win";
 				
-				if ( enter == "X" ) {
+				if (enter == "X") {
 					scoreX++;
-					textBlock5.Text = scoreX.ToString( );
+					textBlock5.Text = scoreX.ToString();
 				}
-				if ( enter == "0" ) {
+				if (enter == "0") {
 					scoreZ++;
-					textBlock6.Text = scoreZ.ToString( );
+					textBlock6.Text = scoreZ.ToString();
 				}
 				button.IsEnabled = false;
 				button1.IsEnabled = false;
@@ -228,20 +228,20 @@ namespace Game {
 				button4.IsEnabled = false;
 				button6.IsEnabled = false;
 				button7.IsEnabled = false;
-				button11.Visibility = ( Visibility )0;
+				button11.Visibility = (Visibility)0;
 				return 1;
 			}
 			//Diagonal
-			if ( button.Content == button4.Content && button.Content == button8.Content && ( string )( button.Content ) == enter ) {
+			if (button.Content == button4.Content && button.Content == button8.Content && (string)(button.Content) == enter) {
 				textBlock.Text = enter + " (" + name + ") is Win";
 				
-				if ( enter == "X" ) {
+				if (enter == "X") {
 					scoreX++;
-					textBlock5.Text = scoreX.ToString( );
+					textBlock5.Text = scoreX.ToString();
 				}
-				if ( enter == "0" ) {
+				if (enter == "0") {
 					scoreZ++;
-					textBlock6.Text = scoreZ.ToString( );
+					textBlock6.Text = scoreZ.ToString();
 				}
 				button1.IsEnabled = false;
 				button2.IsEnabled = false;
@@ -249,19 +249,19 @@ namespace Game {
 				button5.IsEnabled = false;
 				button6.IsEnabled = false;
 				button7.IsEnabled = false;
-				button11.Visibility = ( Visibility )0;
+				button11.Visibility = (Visibility)0;
 				return 1;
 			}
-			if ( button2.Content == button4.Content && button2.Content == button6.Content && ( string )( button2.Content ) == enter ) {
+			if (button2.Content == button4.Content && button2.Content == button6.Content && (string)(button2.Content) == enter) {
 				textBlock.Text = enter + " (" + name + ") is Win";
 				
-				if ( enter == "X" ) {
+				if (enter == "X") {
 					scoreX++;
-					textBlock5.Text = scoreX.ToString( );
+					textBlock5.Text = scoreX.ToString();
 				}
-				if ( enter == "0" ) {
+				if (enter == "0") {
 					scoreZ++;
-					textBlock6.Text = scoreZ.ToString( );
+					textBlock6.Text = scoreZ.ToString();
 				}
 				button.IsEnabled = false;
 				button1.IsEnabled = false;
@@ -269,7 +269,7 @@ namespace Game {
 				button5.IsEnabled = false;
 				button7.IsEnabled = false;
 				button8.IsEnabled = false;
-				button11.Visibility = ( Visibility )0;
+				button11.Visibility = (Visibility)0;
 				return 1;
 			} else {
 				return 0;
@@ -282,14 +282,14 @@ namespace Game {
 			Click Treatment
 		====================
 		*/
-		public void Write( Button button ) {
+		public void Write(Button button) {
 			button.Content = enter;
-			
-			if ( ( string )( button.Content ) == enter ) {
+
+			if ((string)(button.Content) == enter) {
 				button.IsEnabled = false;
 			}
-			if ( Inspection( )!=1 ) {
-				if ( enter == "X" ) {
+			if (Inspection()!=1) {
+				if (enter == "X") {
 					enter = "0";
 					textBlock.Text = enter + " turning";
 				} else {
@@ -305,41 +305,41 @@ namespace Game {
 			Button Click
 		====================
 		*/
-		private void button_Click( object sender, RoutedEventArgs e ) {
-			Write( button );
-		
+		private void button_Click(object sender, RoutedEventArgs e) {
+			Write(button);
+
 		}
-		private void button1_Click( object sender, RoutedEventArgs e ) {
-			Write( button1 );
+		private void button1_Click(object sender, RoutedEventArgs e) {
+			Write(button1);
+
+		}
+		private void button2_Click(object sender, RoutedEventArgs e) {
+			Write(button2);
+
+		}
+		private void button3_Click(object sender, RoutedEventArgs e) {
+			Write(button3);
+
+		}
+		private void button4_Click(object sender, RoutedEventArgs e) {
+			Write(button4);
+
+		}
+		private void button5_Click(object sender, RoutedEventArgs e) {
+			Write(button5);
+
+		}
+		private void button6_Click(object sender, RoutedEventArgs e) {
+			Write(button6);
+
+		}
+		private void button7_Click(object sender, RoutedEventArgs e) {
+			Write(button7);
 			
 		}
-		private void button2_Click( object sender, RoutedEventArgs e ) {
-			Write( button2 );
-			
-		}
-		private void button3_Click( object sender, RoutedEventArgs e ) {
-			Write( button3 );
-			
-		}
-		private void button4_Click( object sender, RoutedEventArgs e ) {
-			Write( button4 );
-			
-		}
-		private void button5_Click( object sender, RoutedEventArgs e ) {
-			Write( button5 );
-			
-		}
-		private void button6_Click( object sender, RoutedEventArgs e ) {
-			Write( button6 );
-			
-		}
-		private void button7_Click( object sender, RoutedEventArgs e ) {
-			Write( button7 );
-			
-		}
-		private void button8_Click( object sender, RoutedEventArgs e ) {
-			Write( button8 );
-			
+		private void button8_Click(object sender, RoutedEventArgs e) {
+			Write(button8);
+
 		}
 		/*
 		====================
@@ -348,17 +348,19 @@ namespace Game {
 			Button Click
 		====================
 		*/
-		private void button9_Click( object sender, RoutedEventArgs e ) {
-			Start( );
+		private void button9_Click(object sender, RoutedEventArgs e) {
+			Start();
 		}
-		private void button10_Click( object sender, RoutedEventArgs e ) {
-			Play( );
+		private void button10_Click(object sender, RoutedEventArgs e) {
+			Play();
 		}
 
-		private void button11_Click( object sender, RoutedEventArgs e ) {
-			//Start( );
-			Play( );
-			button11.Visibility = ( Visibility )1;
+		private void button11_Click(object sender, RoutedEventArgs e) {
+			//Start();
+			Play();
+			button11.Visibility = (Visibility)1;
 		}
 	}
 }
+
+
